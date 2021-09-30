@@ -42,7 +42,8 @@ class App extends Component<props, state>{
     );
   }
   componentWillUnmount() {
-    this.data$.unsubscribe();
+    // dont need to unsubscribe forkJoin because it returns complete observable with single value
+    //  this.data$.unsubscribe();
   }
 
   render() {
